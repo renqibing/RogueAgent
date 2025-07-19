@@ -1,18 +1,18 @@
 <div align="center">
-<h1> Large-scale Multi-Agent Collusion Simulation in Social Systems 
+<h1> Large-scale Multi-Agent Collusion Simulation Framework in Social Systems 
 </h1>
 
-[Paper](https://arxiv.org/abs/2411.11581) 
-[Dataset](https://huggingface.co/datasets/oasis-agent/oasis-dataset) |
+[Paper]() ｜ 
+[Dataset](https://huggingface.co/datasets/renqibing/MultiAgentCollusion/tree/main) 
 
 </div>
 <p align="left">
   <img src='assets/framework.png'>
-MultiAgentCollusion (MAC) is an open-source framework that incorporates large language model agents to realistically simulate the collusion behavior of malicious users on high-stake areas like misinformation spreading and e-commerce fraud. Our framework is designed to explore the adaptability of agents against environment dynamics like intervention measures and emergency of complex group behaviors. 
+RogueAgent is an open-source framework that incorporates large language model agents to realistically simulate the collusion behavior of malicious users on high-stake areas like misinformation spreading and e-commerce fraud. Our framework is designed to explore the adaptability of agents against environment dynamics like intervention measures and emergency of complex group behaviors. 
 </p>
 
 <div align="center">
-🌟 Star MAC on GitHub and be instantly notified of new releases.
+🌟 Star RogueAgent on GitHub and be instantly notified of new releases.
 </div>
 
 ## 📋 Table of Contents
@@ -24,7 +24,7 @@ MultiAgentCollusion (MAC) is an open-source framework that incorporates large la
 - [🛠️ How to Run Our Tools](#️-how-to-run-our-tools)
 - [🙌 Acknowledgment](#-acknowledgment)
 - [🔗 Citation](#-citation)
-- [🖺 License](#-license)
+- [License](#-license)
 
 ## ✨ Key Features 
 ### 👍🏼 Realistic Simulation of Social Media Platforms
@@ -53,7 +53,7 @@ pip install -e .  # This will install dependencies as specified in pyproject.tom
 
 ## 📊 Dataset and Agent Profiles
 
-To reduce the repository size and improve download speed, we have uploaded the post data and large-scale agent profile data to Hugging Face Datasets. Please download the following files and place them in the corresponding directories:
+To reduce the repository size and improve download speed, we have uploaded the post data and large-scale agent profile data to Hugging Face [Datasets](https://huggingface.co/datasets/renqibing/MultiAgentCollusion/tree/main). Please download the following files and place them in the corresponding directories:
 
 - `test_5500_good_bad_random_bernoulli_scalling.csv` → `data/our_twitter_sim/scalling/`
 - `gossipcop_fake.csv` → `data/tweets/FakeNewsNet/dataset/`
@@ -235,10 +235,10 @@ Thanks to [OASIS](https://github.com/camel-ai/oasis), our project was developed 
       title={When Autonomy Goes Rogue: Preparing for Risks of Multi-Agent Collusion in Social Systems}, 
       author={Qibing Ren, Sitao Xie, Longxuan Wei, Zhenfei Yin, Junchi Yan, Lizhuang Ma, and Jing Shao},
       year={2025},
-      eprint={2502.09990},
+      eprint={},
       archivePrefix={arXiv},
       primaryClass={cs.CR},
-      url={https://arxiv.org/abs/2502.09990}, 
+      url={https://arxiv.org/abs/}, 
 }
 ```
 
