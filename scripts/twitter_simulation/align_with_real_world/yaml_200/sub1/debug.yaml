@@ -1,0 +1,42 @@
+---
+data:
+  db_path: data/simu_db/yaml_200/test_110_good_bad_random_multimodal_wlx.db
+  csv_path: data/our_twitter_sim/test_110_good_bad_random_multimodal_wlx.csv
+simulation:
+  num_timesteps: 20
+  clock_factor: 60
+  recsys_type: random
+  reflection: True
+model:
+  num_agents: 110
+  model_random_seed: 42
+  cfgs:
+    - model_type: llama-3
+      num: 110
+      server_url: None
+      model_path: None
+      stop_tokens: [<|eot_id|>, <|end_of_text|>]
+      temperature: 0.0
+inference:
+  model_type: meta-llama/Llama-3.3-70B-Instruct-Turbo
+  model_path: None
+  stop_tokens: [<|eot_id|>, <|end_of_text|>]
+  server_url:
+    - host: 10.140.1.110
+      ports: [40000,40001,40002,40003,40004,40005,40006,40007,40008,40009,40010,40011,40012,40013,40014,40015,40016,40017,40018,40019]
+  #   - host: 10.140.0.143
+  #     ports: [8200]
+  # port_ranges:
+  #   - range:
+  #       start: 0
+  #       end: 4
+  #     ports: [8100]
+  #   - range:
+  #       start: 5
+  #       end: 9
+  #     ports: [8200]
+# defense:
+#   strategy: ban
+#   start: 3
+#   end: 8
+#   threshold: 0.5

@@ -1,0 +1,33 @@
+---
+data:
+  db_path: data/simu_db/yaml_200/debunking/test.db
+  csv_path: data/our_twitter_sim/debunking/test.csv
+simulation:
+  num_timesteps: 100
+  clock_factor: 60
+  recsys_type: twhin-bert
+  reflection: True
+  shared_reflection: True
+  detection: False
+model:
+  num_agents: 1000
+  model_random_seed: NULL
+  cfgs:
+    - model_type: /mnt/petrelfs/renqibing/workspace/models/qwen
+      num: 1000
+      server_url: http://10.140.54.106:40000/v1
+      model_path: vllm
+      stop_tokens: [<|eot_id|>, <|end_of_text|>]
+      temperature: 0.0
+inference:
+  model_type: /mnt/petrelfs/renqibing/workspace/models/qwen
+  model_path: vllm
+  stop_tokens: [<|eot_id|>, <|end_of_text|>]
+  timeout: 3000
+  server_url:
+    - host: 10.140.54.106
+      ports: [40000]
+defense:
+  strategy: debunking
+  timestep: 50
+  threshold: 1.0

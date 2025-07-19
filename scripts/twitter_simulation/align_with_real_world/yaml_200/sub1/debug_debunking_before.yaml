@@ -1,0 +1,40 @@
+---
+data:
+  db_path: data/simu_db/yaml_200/test_110_good_bad_random_multimodal_debunking_before_wlx.db
+  csv_path: data/our_twitter_sim/test_110_good_bad_random_multimodal_debunking_before_wlx.csv
+simulation:
+  num_timesteps: 10
+  clock_factor: 60
+  recsys_type: twhin-bert
+model:
+  num_agents: 110
+  model_random_seed: 42
+  cfgs:
+    - model_type: llama-3
+      num: 110
+      server_url: None
+      model_path: None
+      stop_tokens: [<|eot_id|>, <|end_of_text|>]
+      temperature: 0.0
+inference:
+  model_type: meta-llama/Llama-3.3-70B-Instruct-Turbo
+  model_path: None
+  stop_tokens: [<|eot_id|>, <|end_of_text|>]
+  server_url:
+    - host: None
+      ports: [8000]
+  #   - host: 10.140.0.143
+  #     ports: [8200]
+  # port_ranges:
+  #   - range:
+  #       start: 1
+  #       end: 10
+  #     ports: [8100]
+  #   - range:
+  #       start: 11
+  #       end: 20
+  #     ports: [8200]
+defense:
+  strategy: debunking
+  timestep: 0
+  threshold: 0.5

@@ -1,0 +1,22 @@
+---
+simulation:
+  num_timesteps: Null
+  clock_factor: Null
+  recsys_type: Null
+model:
+  num_agents: Null
+  model_random_seed: Null
+  cfgs:
+    - model_type: meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo
+      num: 120
+      server_url: http://10.140.1.25:8500/v1
+      model_path: meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo
+      stop_tokens: [<|eot_id|>, <|end_of_text|>]
+      temperature: 0.0
+inference:
+  model_type: Null
+  model_path: Null
+  stop_tokens: Null
+  server_url:
+    - host: 10.140.1.25
+      ports: [8500, 8501]

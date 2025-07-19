@@ -1,0 +1,37 @@
+---
+data:
+  db_path: data/simu_db/yaml_200/test_random_multimodal.db
+  csv_path: data/our_twitter_sim/debug.csv
+simulation:
+  num_timesteps: 2
+  clock_factor: 60
+  recsys_type: twhin-bert
+model:
+  num_agents: 4
+  model_random_seed: 42
+  cfgs:
+    - model_type: llama-3
+      num: 4
+      server_url: http://10.140.0.143:8500/v1
+      model_path: /mnt/hwfile/trustai/models/Meta-Llama-3-8B-Instruct
+      stop_tokens: [<|eot_id|>, <|end_of_text|>]
+      temperature: 1.0
+inference:
+  model_type: llama-3
+  model_path: /mnt/hwfile/trustai/models/Meta-Llama-3-8B-Instruct
+  stop_tokens: [<|eot_id|>, <|end_of_text|>]
+  server_url:
+    - host: 10.140.0.143
+      ports: [8500]
+    - host: 10.140.0.240
+      ports:
+        - 8200
+  port_ranges:
+    - range:
+        start: 0
+        end: 50
+      ports: [8100]
+    - range:
+        start: 51
+        end: 10000
+      ports: [8200]
